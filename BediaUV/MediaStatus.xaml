@@ -1,0 +1,68 @@
+﻿<UserControl
+    x:Class="BediaUV.MediaStatus"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BediaUV"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="90"
+    d:DesignWidth="1000">
+
+    <Grid Name="StatusBubbles">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="90" x:Name="Col0"/>
+            <ColumnDefinition Width="90" x:Name="Col1"/>
+            <ColumnDefinition Width="90" x:Name="Col2"/>
+            <ColumnDefinition Width="90" x:Name="Col3"/>
+            <ColumnDefinition Width="90" x:Name="Col4"/>
+            <ColumnDefinition Width="90" x:Name="Col5"/>
+            <ColumnDefinition Width="90" x:Name="Col6"/>
+            <ColumnDefinition Width="90" x:Name="Col7"/>
+            <ColumnDefinition Width="90" x:Name="Col8"/>
+            <ColumnDefinition Width="90" x:Name="Col9"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        
+        <Ellipse Grid.Column="1" Name="Status0" Fill="Transparent" StrokeThickness="0" Opacity="0.01" Margin="4" />
+        <Ellipse Grid.Column="2" Name="Status1" Fill="Transparent" StrokeThickness="0" Opacity="0.01" Margin="4" />
+        <Ellipse Grid.Column="3" Name="Status2" Fill="Transparent" StrokeThickness="0" Opacity="0.01" Margin="4" />
+        <Ellipse Grid.Column="4" Name="Status3" Fill="Transparent" StrokeThickness="0" Opacity="0.01" Margin="4" />
+        <Ellipse Grid.Column="5" Name="Status4" Fill="Transparent" StrokeThickness="0" Opacity="0.01" Margin="4" />
+        <Ellipse Grid.Column="6" Name="Status5" Fill="Transparent" StrokeThickness="0" Opacity="0.01" Margin="4" />
+        <Ellipse Grid.Column="7" Name="Status6" Fill="Transparent" StrokeThickness="0" Opacity="0.01" Margin="4" />
+        <Ellipse Grid.Column="8" Name="Status7" Fill="Transparent" StrokeThickness="0" Opacity="0.01" Margin="4" />
+        <Ellipse Grid.Column="9" Name="Status8" Fill="Transparent" StrokeThickness="0" Opacity="0.01" Margin="4" />
+        <Ellipse Grid.Column="10" Name="Status9" Fill="Transparent" StrokeThickness="0" Opacity="0.01" Margin="4" />
+
+
+        <Ellipse Grid.Column="1" Name="Status0Outline" Fill="Transparent" StrokeThickness="2" Opacity="0.01" Margin="4" />
+        <Ellipse Grid.Column="2" Name="Status1Outline" Fill="Transparent" StrokeThickness="2" Opacity="0.01" Margin="4" />
+        <Ellipse Grid.Column="3" Name="Status2Outline" Fill="Transparent" StrokeThickness="2" Opacity="0.01" Margin="4" />
+        <Ellipse Grid.Column="4" Name="Status3Outline" Fill="Transparent" StrokeThickness="2" Opacity="0.01" Margin="4" />
+        <Ellipse Grid.Column="5" Name="Status4Outline" Fill="Transparent" StrokeThickness="2" Opacity="0.01" Margin="4" />
+        <Ellipse Grid.Column="6" Name="Status5Outline" Fill="Transparent" StrokeThickness="2" Opacity="0.01" Margin="4" />
+        <Ellipse Grid.Column="7" Name="Status6Outline" Fill="Transparent" StrokeThickness="2" Opacity="0.01" Margin="4" />
+        <Ellipse Grid.Column="8" Name="Status7Outline" Fill="Transparent" StrokeThickness="2" Opacity="0.01" Margin="4" />
+        <Ellipse Grid.Column="9" Name="Status8Outline" Fill="Transparent" StrokeThickness="2" Opacity="0.01" Margin="4" />
+        <Ellipse Grid.Column="10" Name="Status9Outline" Fill="Transparent" StrokeThickness="2" Opacity="0.01" Margin="4" />
+
+        <Ellipse Grid.Column="1" Name="WindowsVolume0" Fill="Transparent" StrokeThickness="1" Opacity="0.01" Margin="24" />
+        <Ellipse Grid.Column="2" Name="WindowsVolume1" Fill="Transparent" StrokeThickness="1" Opacity="0.01" Margin="24" />
+        <Ellipse Grid.Column="3" Name="WindowsVolume2" Fill="Transparent" StrokeThickness="1" Opacity="0.01" Margin="24" />
+        <Ellipse Grid.Column="4" Name="WindowsVolume3" Fill="Transparent" StrokeThickness="1" Opacity="0.01" Margin="24" />
+        <Ellipse Grid.Column="5" Name="WindowsVolume4" Fill="Transparent" StrokeThickness="1" Opacity="0.01" Margin="24" />
+        <Ellipse Grid.Column="6" Name="WindowsVolume5" Fill="Transparent" StrokeThickness="1" Opacity="0.01" Margin="24" />
+        <Ellipse Grid.Column="7" Name="WindowsVolume6" Fill="Transparent" StrokeThickness="1" Opacity="0.01" Margin="24" />
+        <Ellipse Grid.Column="8" Name="WindowsVolume7" Fill="Transparent" StrokeThickness="1" Opacity="0.01" Margin="24" />
+        <Ellipse Grid.Column="9" Name="WindowsVolume8" Fill="Transparent" StrokeThickness="1" Opacity="0.01" Margin="24" />
+        <Ellipse Grid.Column="10" Name="WindowsVolume9" Fill="Transparent" StrokeThickness="1" Opacity="0.01" Margin="24" />
+
+    </Grid>
+</UserControl>

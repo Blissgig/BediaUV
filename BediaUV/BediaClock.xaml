@@ -1,0 +1,70 @@
+﻿<UserControl
+    x:Class="BediaUV.BediaClock"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BediaUV"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Name="BediaClockk"
+    d:DesignHeight="90"
+    d:DesignWidth="400">
+    
+    <UserControl.Resources>
+        <local:ScaleConverter x:Key="ScaleConverter" />
+    </UserControl.Resources>
+    
+    <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="90" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Name="Hour" 
+                   Grid.Column="0"
+                   Foreground="White" 
+                   VerticalAlignment="Center" 
+                   FontSize="{Binding ElementName=BediaClockk, Path=ActualHeight, Converter={StaticResource ScaleConverter}, ConverterParameter='76'}"
+                       />
+
+            <TextBlock Name="Colon" 
+                   Grid.Column="1" 
+                   Foreground="White" 
+                   TextAlignment="Center" 
+                   VerticalAlignment="Center" 
+                   Margin="3,0,3,0"
+                       Opacity="0.0"
+                   FontSize="{Binding ElementName=BediaClockk, Path=ActualHeight, Converter={StaticResource ScaleConverter}, ConverterParameter='76'}"
+                   x:FieldModifier="public"   
+                   />
+
+            <TextBlock Name="MinutesTen" 
+                   Grid.Column="2" 
+                   Foreground="White" 
+                   VerticalAlignment="Center" 
+                   FontSize="{Binding ElementName=BediaClockk, Path=ActualHeight, Converter={StaticResource ScaleConverter}, ConverterParameter='76'}"
+                       />
+
+            <TextBlock Name="Minutes" 
+                   Grid.Column="3" 
+                   Foreground="White" 
+                   VerticalAlignment="Center" 
+                   FontSize="{Binding ElementName=BediaClockk, Path=ActualHeight, Converter={StaticResource ScaleConverter}, ConverterParameter='76'}"
+                       />
+
+            <TextBlock Name="AMPM" 
+                Grid.Column="4" 
+                Foreground="White" 
+                VerticalAlignment="Center" 
+                Margin="10,0,4,0"
+                FontSize="{Binding ElementName=BediaClockk, Path=ActualHeight, Converter={StaticResource ScaleConverter}, ConverterParameter='76'}"
+                       />
+        </Grid>
+</UserControl>

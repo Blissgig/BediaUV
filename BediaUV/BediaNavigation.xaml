@@ -1,0 +1,65 @@
+﻿<UserControl
+    x:Class="BediaUV.BediaNavigation"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BediaUV"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="90"
+    d:DesignWidth="1000">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition x:Name="rowAll" Height="{Binding ElementName=NI, Path=ActualHeight}" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" x:Name="colLeft" />
+            <ColumnDefinition Width="88" x:Name="colCenter" x:FieldModifier="public" />
+            <ColumnDefinition Width="*" x:Name="colRight" />
+        </Grid.ColumnDefinitions>
+
+        <Ellipse Name="IconBackgroundLeft" 
+                 Grid.Column="0" 
+                 Grid.Row="0" 
+                 Fill="#317bc1" 
+                 Stroke="White" 
+                 StrokeThickness="4" 
+                 Width="90"
+                 Opacity="1.0"
+                 Margin="0,0,4,0"
+                 HorizontalAlignment="Right" 
+                 x:FieldModifier="public"                  
+                 />
+
+        <Ellipse Name="IconBackgroundRight" 
+                 Grid.Column="2" 
+                 Grid.Row="0" 
+                 Fill="#317bc1" 
+                 Stroke="White" 
+                 StrokeThickness="4" 
+                 Width="90"
+                 Opacity="1.0"
+                 Margin="4,0,0,0"
+                 HorizontalAlignment="Left" 
+                 x:FieldModifier="public" 
+                 />
+
+        <Image Name="NavLeftImage" 
+               Grid.Column="0" 
+               Source="/Assets/Menu.png" 
+               HorizontalAlignment="Right" 
+               x:FieldModifier="public" 
+               Margin="4"
+               />
+        
+        <Image Name="NavRightImage" 
+               Grid.Column="2" 
+               Source="/Assets/NavNext.png" 
+               HorizontalAlignment="Left" 
+               x:FieldModifier="public" 
+               Margin="4"
+               />
+
+    </Grid>
+</UserControl>

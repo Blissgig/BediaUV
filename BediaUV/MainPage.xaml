@@ -1,0 +1,110 @@
+﻿<Page
+    x:Class="BediaUV.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BediaUV"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:PlayerFramework="using:Microsoft.PlayerFramework"
+    xmlns:Maps="using:Windows.UI.Xaml.Controls.Maps"
+    mc:Ignorable="d" 
+    Loaded="Page_Loaded"
+    PointerPressed="Page_PointerPressed" 
+    PointerReleased="Page_PointerReleased" 
+    PointerWheelChanged="Page_PointerWheelChanged" 
+    SizeChanged="Page_SizeChanged"
+    >
+        <Grid Name="BediaBase" 
+          x:FieldModifier="public" 
+          Background="Black"
+          Canvas.Left="0"
+          >
+
+            <Grid.RowDefinitions >
+            <RowDefinition Height="90" x:Name="rowTitlebar" x:FieldModifier="public"/>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+    
+            <Canvas Name="BediaBubbles" 
+                    x:FieldModifier="public"  
+                    Grid.Row="1" 
+                    Opacity="1.0" />
+
+            <Canvas Name="MediaBackground" 
+                    x:FieldModifier="public"  
+                    Background="Black" 
+                    Grid.Row="0" 
+                    Grid.RowSpan="2" 
+                    Opacity="0.0" />
+
+            <PlayerFramework:MediaPlayer x:Name="BediaMedia"
+                    x:FieldModifier="public"                                       
+                    Grid.Row="0" 
+                    Grid.RowSpan="2"  
+                    Opacity="0.0" 
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Stretch"
+                    AudioCategory="BackgroundCapableMedia"
+                    IsAudioSelectionVisible="False" 
+                    IsAudioSelectionEnabled="False" 
+                    IsPlayPauseVisible="False" 
+                    IsTimelineVisible="False" 
+                    IsTimeElapsedVisible="False" 
+                    IsTimeRemainingVisible="False" 
+                    IsTrickPlayEnabled="False" 
+                    IsVolumeVisible="False" 
+                    IsZoomEnabled="False" 
+                    Foreground="Black" 
+                    MediaEnded="BediaMedia_MediaEnded"
+                    MediaFailed="BediaMedia_MediaFailed" 
+                    MediaOpened="BediaMedia_MediaOpened"                                         
+                    >
+                    
+                    <PlayerFramework:MediaPlayer.Plugins>
+                    </PlayerFramework:MediaPlayer.Plugins>
+        </PlayerFramework:MediaPlayer>
+
+            <Grid Name="MediaOverlay" 
+                    x:FieldModifier="public"  
+                    Grid.Row="0" 
+                    Grid.RowSpan="2" 
+                    Opacity="0.0" />
+
+            <Canvas Name="Visualizations" 
+                    x:FieldModifier="public" 
+                    Grid.Row="0" 
+                    Grid.RowSpan="2" 
+                    Opacity="0.0" 
+                    Background="Black" />
+
+        <StackPanel Name="BediaMenus" 
+                    x:FieldModifier="public" 
+                    Grid.Row="1" 
+                        />
+
+        <Maps:MapControl x:Name="BediaMap"
+                        HorizontalAlignment="Left"
+                        x:FieldModifier="public" 
+                        Grid.Row="1" 
+                        Opacity="0.0"
+                        Margin="0"
+                        Visibility="Visible" 
+                        MapRightTapped="BediaMap_MapRightTapped" 
+                        />
+
+        <local:BediaColors x:Name="BediaColors"
+                           x:FieldModifier="public" 
+                           Visibility="Visible"
+                           Opacity="0.0"
+                           Grid.Row="1" 
+                           />
+            
+        <Canvas Name="ScreenSaver" 
+                x:FieldModifier="public"  
+                Grid.Row="0" 
+                Grid.RowSpan="2" 
+                Opacity="0.0" 
+                Background="Black" 
+                Canvas.ZIndex="100" />
+        </Grid>
+</Page>
